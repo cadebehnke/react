@@ -1,13 +1,13 @@
-import "./css/Tree.css";
+import React from 'react';
 
-function Tree(props) {
-    return (
-        <section className="tree">
-            <h3>{props.name}</h3>
-            <p>{props.description}</p>
-            <img src={props.image} />
-        </section>
-    );
+function Tree({ name, description, image }) {
+  return (
+    <div className="tree">
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <img src={image} alt={name} />
+    </div>
+  );
 }
 
 export default Tree;
