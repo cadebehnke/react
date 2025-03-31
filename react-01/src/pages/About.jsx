@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/About.css';
+import me2 from "../images/me2.png";
 
 function About() {
   return (
@@ -11,7 +12,7 @@ function About() {
             <h2>Cade Behnke</h2>
             <p>Born: Charlotte, North Carolina</p>
             <p>School: Current Senior at The University of South Carolina</p>
-            <img src="images/me2.png" alt="Owner" />
+            <img src={me2} alt="Owner" />
             
             <div className="contact-form">
               <h2>Contact Me</h2>

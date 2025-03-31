@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/Home.css';
 import Tree from '../components/Tree';
+import Carousel from "../images/carousel-img.png"
+import BestNewLooks from "../images/best-new-looks.png"
 
 function Home() {
   return (
@@ -8,14 +10,14 @@ function Home() {
       <main>
         <div className="carousel-img-holder">
           <div className="carousel-img">
-            <img src="images/carousel-img.png" alt="Carousel" />
+            <img src={Carousel} alt="Carousel" />
           </div>
         </div>
 
         <div className="flex-container">
           <section className="col1of2">
             <h1 className="section-title">Best New Looks</h1>
-            <img src="images/best-new-looks.png" alt="Best New Looks" />
+            <img src={BestNewLooks} alt="Best New Looks" />
           </section>
 
           <section className="col1of2 best-new-looks-text">

@@ -1,5 +1,11 @@
 import React from 'react';
 import './css/Sale.css';
+import ShoppingBag from "../images/shoppingbag.png";
+import SoccerBall from "../images/soccer-ball.png";
+import AirFryer from "../images/airfryer.png";
+import Brita from "../images/brita.png";
+import Table from "../images/table.png";
+import Backpack from "../images/backpack.png";
 
 function Sale() {
   return (
@@ -9,7 +15,7 @@ function Sale() {
         
         <div className="flex-container">
           <section className="col1of3">
-            <img src="images/shoppingbag.png" alt="Shopping Bag" />
+            <img src={ShoppingBag} alt="Shopping Bag" />
           </section>
           <section className="col1of3">
             <div className="container-text">
@@ -19,13 +25,13 @@ function Sale() {
             </div>
           </section>
           <section className="col1of3">
-            <img className="item-images" src="images/soccer-ball.png" alt="Soccer Ball" />
+            <img className="item-images" src={SoccerBall} alt="Soccer Ball" />
           </section>
         </div>
 
         <div className="flex-container">
           <section className="col1of3">
-            <img src="images/shoppingbag.png" alt="Shopping Bag" />
+            <img src={ShoppingBag} alt="Shopping Bag" />
           </section>
           <section className="col1of3">
             <div className="container-text">
@@ -35,13 +41,13 @@ function Sale() {
             </div>
           </section>
           <section className="col1of3">
-            <img src="images/airfryer.png" alt="Air Fryer" />
+            <img src={AirFryer} alt="Air Fryer" />
           </section>
         </div>
 
         <div className="flex-container">
           <section className="col1of3">
-            <img src="images/shoppingbag.png" alt="Shopping Bag" />
+            <img src={ShoppingBag} alt="Shopping Bag" />
           </section>
           <section className="col1of3">
             <div className="container-text">
@@ -51,13 +57,13 @@ function Sale() {
             </div>
           </section>
           <section className="col1of3">
-            <img src="images/brita.png" alt="Brita Water Filter" />
+            <img src={Brita} alt="Brita Water Filter" />
           </section>
         </div>
 
         <div className="flex-container">
           <section className="col1of3">
-            <img src="images/shoppingbag.png" alt="Shopping Bag" />
+            <img src={ShoppingBag} alt="Shopping Bag" />
           </section>
           <section className="col1of3">
             <div className="container-text">
@@ -67,13 +73,13 @@ function Sale() {
             </div>
           </section>
           <section className="col1of3">
-            <img src="images/table.png" alt="Vintage Storage Sideboard" />
+            <img src={Table} alt="Vintage Storage Sideboard" />
           </section>
         </div>
 
         <div className="flex-container">
           <section className="col1of3">
-            <img src="images/shoppingbag.png" alt="Shopping Bag" />
+            <img src={ShoppingBag} alt="Shopping Bag" />
           </section>
           <section className="col1of3">
             <div className="container-text">
@@ -83,7 +89,7 @@ function Sale() {
             </div>
           </section>
           <section className="col1of3">
-            <img src="images/backpack.png" alt="Athletic Trainer Backpack" />
+            <img src={Backpack} alt="Athletic Trainer Backpack" />
           </section>
         </div>
       </main>

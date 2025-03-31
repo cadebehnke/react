@@ -1,5 +1,8 @@
 import "./css/Header.css";
 import Navigation from "./Navigation";
+import BehnkeGoods from "../images/Behnke's-Goods.png";
+import SignIn from "../images/sign-in.png";
+import Cart from "../images/cart.png";
 
 function Header() {
     return(
@@ -9,7 +12,7 @@ function Header() {
       </header>
       <div id="top-bar">
         <div id="logo-container">
-          <img src="images/Behnke's-Goods.png" alt="Behnke's Goods Logo" id="store-logo" />
+          <img src={BehnkeGoods} alt="Behnke's Goods Logo" id="store-logo" />
           <div id="store-name">Behnke's Goods</div>
         </div>
 
@@ -19,11 +22,11 @@ function Header() {
 
         <div id="icons">
           <a href="#" className="icon">
-            <img src="images/sign-in.png" alt="Sign In" />
+            <img src={SignIn} alt="Sign In" />
             <span>Sign In</span>
           </a>
           <a href="#" className="icon">
-            <img src="images/cart.png" alt="Cart" />
+            <img src={Cart} alt="Cart" />
             <span>Cart</span>
           </a>
         </div>

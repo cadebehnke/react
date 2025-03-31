@@ -1,5 +1,12 @@
 import React from 'react';
 import './css/Women.css';
+import Jeans from  "../images/jeans.png";
+import Outerwear from "../images/outerwear.png";
+import Dress from "../images/dress.png";
+import Sweater from "../images/sweater.png";
+import Pants from "../images/pants.png";
+import Pajamas from "../images/pajamas.png";
+import Stars from "../images/stars.png";
 
 function Women() {
   return (
@@ -9,27 +16,27 @@ function Women() {
         <h1>Shop by Category</h1>
         <div className="flex-container">
           <section className="col1of2">
-            <img src="images/jeans.png" alt="Jeans" />
+            <img src={Jeans} alt="Jeans" />
             <p>Jeans</p>
           </section>
           <section className="col1of2">
-            <img src="images/outerwear.png" alt="Outerwear" />
+            <img src={Outerwear} alt="Outerwear" />
             <p>Outerwear</p>
           </section>
           <section className="col1of2">
-            <img src="images/dress.png" alt="Dresses" />
+            <img src={Dress} alt="Dresses" />
             <p>Dresses</p>
           </section>
           <section className="col1of2">
-            <img src="images/sweater.png" alt="Sweaters" />
+            <img src={Sweater} alt="Sweaters" />
             <p>Sweaters</p>
           </section>
           <section className="col1of2">
-            <img src="images/pants.png" alt="Pants" />
+            <img src={Pants} alt="Pants" />
             <p>Pants</p>
           </section>
           <section className="col1of2">
-            <img src="images/pajamas.png" alt="Pajamas" />
+            <img src={Pajamas} alt="Pajamas" />
             <p>Pajamas</p>
           </section>
         </div>
@@ -63,7 +70,7 @@ function Women() {
             </section>
             <section>
               <h3>Five Star Reviews!</h3>
-              <img src="images/stars.png" alt="Five Star Reviews" />
+              <img src={Stars} alt="Five Star Reviews" />
             </section>
           </section>
         </div>

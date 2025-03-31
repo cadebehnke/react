@@ -1,5 +1,12 @@
 import React from 'react';
 import './css/Men.css';
+import mJeans from "../images/m-jeans.png";
+import mTees from "../images/m-tee.png";
+import mPants from "../images/m-pants.png";
+import mSweater from "../images/m-sweater.png";
+import mShirt from "../images/m-shirt.png";
+import mCoat from "../images/m-coat.png";
+import Stars from "../images/stars.png";
 
 function Men() {
   return (
@@ -9,27 +16,27 @@ function Men() {
         <h1>Shop by Category</h1>
         <div className="flex-container">
           <section className="col1of2">
-            <img src="images/m-jeans.png" alt="Jeans" />
+            <img src={mJeans} alt="Jeans" />
             <p>Jeans</p>
           </section>
           <section className="col1of2">
-            <img src="images/m-tee.png" alt="Tees" />
+            <img src={mTees} alt="Tees" />
             <p>Tees</p>
           </section>
           <section className="col1of2">
-            <img src="images/m-pants.png" alt="Pants" />
+            <img src={mPants} alt="Pants" />
             <p>Pants</p>
           </section>
           <section className="col1of2">
-            <img src="images/m-sweater.png" alt="Sweaters" />
+            <img src={mSweater} alt="Sweaters" />
             <p>Sweaters</p>
           </section>
           <section className="col1of2">
-            <img src="images/m-shirt.png" alt="Shirts" />
+            <img src={mShirt} alt="Shirts" />
             <p>Shirts</p>
           </section>
           <section className="col1of2">
-            <img src="images/m-coat.png" alt="Coats" />
+            <img src={mCoat} alt="Coats" />
             <p>Coats</p>
           </section>
         </div>
@@ -61,7 +68,7 @@ function Men() {
             </section>
             <section>
               <h3>Five Star Reviews!</h3>
-              <img src="images/stars.png" alt="Five Star Reviews" />
+              <img src={Stars} alt="Five Star Reviews" />
             </section>
           </section>
         </div>
