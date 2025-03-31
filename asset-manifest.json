@@ -1,13 +1,36 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.4d161f60.css",
-    "main.js": "/react/static/js/main.5df9aba1.js",
+    "main.css": "/react/static/css/main.99f9072e.css",
+    "main.js": "/react/static/js/main.bcdb39ff.js",
+    "static/media/Behnke's-Goods.png": "/react/static/media/Behnke's-Goods.2c9c606ce114c85f7756.png",
+    "static/media/me2.png": "/react/static/media/me2.0d1a8b7bdf9ca04029fe.png",
+    "static/media/best-new-looks.png": "/react/static/media/best-new-looks.97c23039f61be1f78894.png",
+    "static/media/carousel-img.png": "/react/static/media/carousel-img.db750638791181b7e437.png",
+    "static/media/pants.png": "/react/static/media/pants.b4d714520e7f8105cdc5.png",
+    "static/media/pajamas.png": "/react/static/media/pajamas.0cea921038266a853479.png",
+    "static/media/table.png": "/react/static/media/table.f2a767c162f221535bef.png",
+    "static/media/backpack.png": "/react/static/media/backpack.032a70812ddff7661551.png",
+    "static/media/m-sweater.png": "/react/static/media/m-sweater.7e66f626e8567eb21e16.png",
+    "static/media/soccer-ball.png": "/react/static/media/soccer-ball.686cc0b33caf2fabffa2.png",
+    "static/media/brita.png": "/react/static/media/brita.791a36d57360d63c55b3.png",
+    "static/media/sweater.png": "/react/static/media/sweater.33bd68127a940db4eec8.png",
+    "static/media/m-tee.png": "/react/static/media/m-tee.c125194c9d04b9441e61.png",
+    "static/media/m-pants.png": "/react/static/media/m-pants.c0adb2758e7a0a7eaf09.png",
+    "static/media/outerwear.png": "/react/static/media/outerwear.4ab4e6ad766c5d2a5eea.png",
+    "static/media/shoppingbag.png": "/react/static/media/shoppingbag.36f19824e0125e1a6813.png",
+    "static/media/stars.png": "/react/static/media/stars.e3ac2b07618edb629ce6.png",
+    "static/media/m-shirt.png": "/react/static/media/m-shirt.0d999d283a53b6fbb722.png",
+    "static/media/m-jeans.png": "/react/static/media/m-jeans.05eeb6ef1d46d3af467c.png",
+    "static/media/jeans.png": "/react/static/media/jeans.0b7926a73533463c84df.png",
+    "static/media/dress.png": "/react/static/media/dress.df707b80223d85442719.png",
+    "static/media/airfryer.png": "/react/static/media/airfryer.d7244dfdaf92f55bee04.png",
+    "static/media/m-coat.png": "/react/static/media/m-coat.38d598caedef633cfa54.png",
     "index.html": "/react/index.html",
-    "main.4d161f60.css.map": "/react/static/css/main.4d161f60.css.map",
-    "main.5df9aba1.js.map": "/react/static/js/main.5df9aba1.js.map"
+    "main.99f9072e.css.map": "/react/static/css/main.99f9072e.css.map",
+    "main.bcdb39ff.js.map": "/react/static/js/main.bcdb39ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d161f60.css",
-    "static/js/main.5df9aba1.js"
+    "static/css/main.99f9072e.css",
+    "static/js/main.bcdb39ff.js"
   ]
 }
