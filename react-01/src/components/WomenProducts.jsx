@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import "./css/WomenProducts.css"; 
 
 function WomenProducts() {
   const [products, setProducts] = useState([]);
@@ -19,7 +20,7 @@ function WomenProducts() {
   }, []);
 
   return (
-    <div className="products-container">
+    <div className="product-grid">
       {products.map((item) => (
         <ProductCard key={item._id} {...item} />
       ))}
