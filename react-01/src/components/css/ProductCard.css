@@ -1,0 +1,34 @@
+.product-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    background: var(--box-background);
+    padding: 15px;
+    margin: 15px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+  }
+  
+  .product-card img {
+    width: 100px;
+    border-radius: 10px;
+  }
+  
+  .details {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .price {
+    color: #e60000;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .rating {
+    color: goldenrod;
+    font-size: 1rem;
+  }
+  

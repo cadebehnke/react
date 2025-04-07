@@ -1,12 +1,14 @@
 import React from 'react';
 import './css/Women.css';
-import Jeans from  "../images/jeans.png";
+import Jeans from "../images/jeans.png";
 import Outerwear from "../images/outerwear.png";
 import Dress from "../images/dress.png";
 import Sweater from "../images/sweater.png";
 import Pants from "../images/pants.png";
 import Pajamas from "../images/pajamas.png";
 import Stars from "../images/stars.png";
+
+import WomenProducts from '../components/WomenProducts';
 
 function Women() {
   return (
@@ -41,18 +43,18 @@ function Women() {
           </section>
         </div>
 
-        <div id="women-products" className="products-container"></div>
+        <WomenProducts />
 
         <div className="flex-container">
           <section className="col1of2">
             <section className="container-text">
               <h3>Ethically Sourced</h3>
               <p>
-                We take pride in ethically sourcing all our clothing, ensuring that every step of the process supports fair wages, safe working conditions, and sustainable materials. Our fabrics come from responsible sources, including organic cotton and recycled materials, reducing our environmental impact while maintaining high quality. We work closely with manufacturers who share our values, ensuring that every worker is treated with dignity and respect. When you shop with us, you’re choosing fashion that not only looks good but also does good for people and the planet.
+                We take pride in ethically sourcing all our clothing, ensuring that every step of the process supports fair wages, safe working conditions, and sustainable materials. Our fabrics come from responsible sources, including organic cotton and recycled materials, reducing our environmental impact while maintaining high quality. We work closely with manufacturers who share our values, ensuring that every worker is treated with dignity and respect.
               </p>
               <h3>Giving Back</h3>
               <p>
-                Beyond our commitment to ethical fashion, we are dedicated to giving back to the community through charitable initiatives and local partnerships. A portion of our profits goes toward programs that provide clothing, education, and essential resources to underserved communities. We also collaborate with local organizations to support job training and mentorship opportunities, helping individuals build a better future. By shopping with us, you’re not just making a purchase—you’re contributing to a movement that uplifts others and creates lasting change.
+                Beyond our commitment to ethical fashion, we are dedicated to giving back to the community through charitable initiatives and local partnerships. A portion of our profits goes toward programs that provide clothing, education, and essential resources to underserved communities.
               </p>
             </section>
           </section>
