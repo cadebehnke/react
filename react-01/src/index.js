@@ -10,6 +10,7 @@ import Women from './pages/Women';
 import Sale from './pages/Sale';
 import About from './pages/About';
 import Nopage from './pages/Nopage';
+import Messages from './pages/Messages';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="men" element={<Men />} />
           <Route path="women" element={<Women />} />
           <Route path="sale" element={<Sale />} />
+          <Route path="messages" element={<Messages />} />
           <Route path="*" element={<Nopage />} />
         </Route>
       </Routes>

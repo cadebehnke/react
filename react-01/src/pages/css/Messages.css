@@ -1,0 +1,40 @@
+.messages-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: var(--box-background);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .message-form input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  }
+  
+  .message-form button {
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--box-background);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .success {
+    color: green;
+  }
+  

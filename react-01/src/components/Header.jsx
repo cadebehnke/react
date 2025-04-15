@@ -1,15 +1,13 @@
 import "./css/Header.css";
-import Navigation from "./Navigation";
 import BehnkeGoods from "../images/Behnke's-Goods.png";
 import SignIn from "../images/sign-in.png";
 import Cart from "../images/cart.png";
 
 function Header() {
-    return(
-        <header>
-            <header id="header">
-        40% OFF THE WHOLE STORE FOR VALENTINE'S DAY!
-      </header>
+  return (
+    <header id="header">
+      40% OFF THE WHOLE STORE FOR VALENTINE'S DAY!
+
       <div id="top-bar">
         <div id="logo-container">
           <img src={BehnkeGoods} alt="Behnke's Goods Logo" id="store-logo" />
@@ -31,19 +29,8 @@ function Header() {
           </a>
         </div>
       </div>
-
-      <nav id="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/sale">Sale</a></li>
-          <li><a href="/men">Men</a></li>
-          <li><a href="/women">Women</a></li>
-        </ul>
-      </nav>
-      <hr />
-        </header>
-    );
-};
+    </header>
+  );
+}
 
 export default Header;

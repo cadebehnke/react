@@ -73,10 +73,6 @@ function Men() {
           </section>
         </div>
       </main>
-
-      <footer id="footer">
-        <p>&copy; Behnke's Goods - Cade Behnke</p>
-      </footer>
     </>
   );
 }
