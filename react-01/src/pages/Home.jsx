@@ -5,7 +5,7 @@ import BestNewLooks from "../images/best-new-looks.png";
 
 function Home() {
   return (
-    <>
+    <div className="home-page">
       <div className="carousel-img-holder">
         <div className="carousel-img">
           <img src={Carousel} alt="Carousel" />
@@ -27,7 +27,7 @@ function Home() {
           </p>
         </section>
       </div>
-    </>
+    </div>
   );
 }
 
