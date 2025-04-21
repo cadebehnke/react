@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.5f3ecbed.css",
-    "main.js": "/react/static/js/main.67f3a2fc.js",
+    "main.css": "/react/static/css/main.11ee6c6b.css",
+    "main.js": "/react/static/js/main.36893e69.js",
     "static/media/Behnke's-Goods.png": "/react/static/media/Behnke's-Goods.2c9c606ce114c85f7756.png",
     "static/media/me2.png": "/react/static/media/me2.0d1a8b7bdf9ca04029fe.png",
     "static/media/best-new-looks.png": "/react/static/media/best-new-looks.97c23039f61be1f78894.png",
@@ -26,11 +26,11 @@
     "static/media/airfryer.png": "/react/static/media/airfryer.d7244dfdaf92f55bee04.png",
     "static/media/m-coat.png": "/react/static/media/m-coat.38d598caedef633cfa54.png",
     "index.html": "/react/index.html",
-    "main.5f3ecbed.css.map": "/react/static/css/main.5f3ecbed.css.map",
-    "main.67f3a2fc.js.map": "/react/static/js/main.67f3a2fc.js.map"
+    "main.11ee6c6b.css.map": "/react/static/css/main.11ee6c6b.css.map",
+    "main.36893e69.js.map": "/react/static/js/main.36893e69.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f3ecbed.css",
-    "static/js/main.67f3a2fc.js"
+    "static/css/main.11ee6c6b.css",
+    "static/js/main.36893e69.js"
   ]
 }
