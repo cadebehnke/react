@@ -4,18 +4,18 @@ import MessageForm from "../components/MessageForm";
 import MessageList from "../components/MessageList";
 import "./css/Messages.css";
 
-const Messages = () => {
+export default function Messages() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://housing-backend-ujyb.onrender.com/api/messages")
-      .then(res => setMessages(res.data))
-      .catch(err => console.error("Error fetching messages:", err));
+      .then((res) => setMessages(res.data))
+      .catch((err) => console.error("Error fetching messages:", err));
   }, []);
 
   const updateMessages = (newMsg) => {
-    setMessages(msgs => [...msgs, newMsg]);
+    setMessages((m) => [...m, newMsg]);
   };
 
   return (
@@ -26,6 +26,4 @@ const Messages = () => {
       <MessageList messages={messages} />
     </div>
   );
-};
-
-export default Messages;
+}
