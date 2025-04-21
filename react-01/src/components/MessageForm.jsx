@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./css/MessageForm.css";
 
-const MessageForm = ({ updateMessages }) => {
+export default function MessageForm({ updateMessages }) {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
     state: "",
     review: ""
   });
-  const [result, setResult] = useState("");
   const [error, setError] = useState("");
+  const [result, setResult] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,22 +19,27 @@ const MessageForm = ({ updateMessages }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); setResult("Sending...");
+    setError("");
+    setResult("Sending...");
 
-    // Client‐side validation (mirrors Joi):
+    // Client‑side validation (must match Joi schema)
     if (formData.name.trim().length < 2) {
-      setError("Name must be at least 2 characters"); return;
+      setError("Name must be at least 2 characters");
+      return;
     }
     const ageNum = Number(formData.age);
     if (isNaN(ageNum) || ageNum < 0 || ageNum > 120) {
-      setError("Age must be between 0 and 120"); return;
+      setError("Age must be between 0 and 120");
+      return;
     }
     if (formData.state.trim().length < 2) {
-      setError("State must be at least 2 characters"); return;
+      setError("State must be at least 2 characters");
+      return;
     }
     const reviewNum = Number(formData.review);
     if (isNaN(reviewNum) || reviewNum < 0 || reviewNum > 5) {
-      setError("Review must be between 0 and 5"); return;
+      setError("Review must be between 0 and 5");
+      return;
     }
 
     try {
@@ -61,13 +66,14 @@ const MessageForm = ({ updateMessages }) => {
         <label>Name:</label>
         <input
           name="name"
+          type="text"
           value={formData.name}
           onChange={handleChange}
           placeholder="Your name"
           required
+          minLength={2}
         />
       </p>
-
       <p>
         <label>Age:</label>
         <input
@@ -81,18 +87,18 @@ const MessageForm = ({ updateMessages }) => {
           max="120"
         />
       </p>
-
       <p>
         <label>State:</label>
         <input
           name="state"
+          type="text"
           value={formData.state}
           onChange={handleChange}
           placeholder="Your state (e.g. TX)"
           required
+          minLength={2}
         />
       </p>
-
       <p>
         <label>Review (0–5):</label>
         <input
@@ -107,15 +113,11 @@ const MessageForm = ({ updateMessages }) => {
           max="5"
         />
       </p>
-
       <p>
         <button type="submit">Submit</button>
       </p>
-
       {result && <p className="result">{result}</p>}
-      {error && <p className="error">{error}</p>}
+      {error  && <p className="error">{error}</p>}
     </form>
   );
-};
-
-export default MessageForm;
+}
