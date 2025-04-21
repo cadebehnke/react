@@ -1,0 +1,89 @@
+/* Dialog box modal styling */
+.w3-modal {
+    display: block; /* Required for modals to be visible */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* dim background */
+  }
+  
+  .w3-modal-content {
+    background-color: #f5e1c8;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid #a67c52;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: #5a3e2b;
+    font-family: Arial, sans-serif;
+  }
+  
+  .w3-container h3 {
+    text-align: center;
+    color: #3b2b1a;
+    margin-bottom: 20px;
+  }
+  
+  .w3-button {
+    background-color: #8b5e3b;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .w3-button:hover {
+    background-color: #c49a6c;
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #a67c52;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #fff8f0;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  form button[type="submit"] {
+    background-color: #3b2b1a;
+    color: #f5e1c8;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #a67c52;
+  }
+  
+  form p {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
