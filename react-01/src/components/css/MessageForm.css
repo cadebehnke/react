@@ -1,0 +1,63 @@
+.message-form {
+    background: var(--box-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+  }
+  
+  .message-form p {
+    margin-bottom: 12px;
+  }
+  
+  .message-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+  
+  .message-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--primary-text);
+    background: #fff;
+  }
+  
+  .message-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: var(--accent-color);
+    color: var(--box-background);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .message-form button:hover {
+    background: var(--hover-color);
+  }
+  
+  .message-form .result {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .message-form .error {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+  }
+  

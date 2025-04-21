@@ -1,0 +1,25 @@
+.messages-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    color: var(--primary-text);
+  }
+  
+  .messages-page h2,
+  .messages-page h3 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .messages-page {
+      padding: 10px;
+    }
+    .messages-page h2,
+    .messages-page h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
