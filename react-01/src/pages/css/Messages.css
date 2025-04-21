@@ -38,3 +38,12 @@
     color: green;
   }
   
+  .messages-page {
+    text-align: center;
+  }
+  
+  .messages-page h2,
+  .messages-page h3 {
+    margin: 0.5em 0;
+  }
+  
