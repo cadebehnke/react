@@ -19,35 +19,39 @@ const MessageForm = ({ updateMessages }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-    setResult("Sending...");
+    setError(""); setResult("Sending...");
 
-    const { name, age, state, review } = formData;
-    if (name.trim().length < 2) return setError("Name ≥ 2 chars");
-    if (age < 0 || age > 120) return setError("Age 0–120");
-    if (state.trim().length < 2) return setError("State ≥ 2 chars");
-    if (review < 0 || review > 5) return setError("Review 0–5");
+    // Client‐side validation (mirrors Joi):
+    if (formData.name.trim().length < 2) {
+      setError("Name must be at least 2 characters"); return;
+    }
+    const ageNum = Number(formData.age);
+    if (isNaN(ageNum) || ageNum < 0 || ageNum > 120) {
+      setError("Age must be between 0 and 120"); return;
+    }
+    if (formData.state.trim().length < 2) {
+      setError("State must be at least 2 characters"); return;
+    }
+    const reviewNum = Number(formData.review);
+    if (isNaN(reviewNum) || reviewNum < 0 || reviewNum > 5) {
+      setError("Review must be between 0 and 5"); return;
+    }
 
     try {
       const res = await axios.post(
         "https://housing-backend-ujyb.onrender.com/api/messages",
         {
-          name,
-          age: Number(age),
-          state,
-          review: Number(review)
+          name: formData.name.trim(),
+          age: ageNum,
+          state: formData.state.trim(),
+          review: reviewNum
         }
       );
-
-      if (res.status === 200) {
-        setResult("Message added!");
-        updateMessages(res.data);      
-        setFormData({ name: "", age: "", state: "", review: "" });
-      } else {
-        setError("Error adding message");
-      }
+      updateMessages(res.data);
+      setResult("Message added!");
+      setFormData({ name: "", age: "", state: "", review: "" });
     } catch (err) {
-      setError(err.response?.data || "Server error");
+      setError(err.response?.data || "Error adding message");
     }
   };
 
@@ -59,10 +63,11 @@ const MessageForm = ({ updateMessages }) => {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          placeholder="Your name"
           required
-          minLength={2}
         />
       </p>
+
       <p>
         <label>Age:</label>
         <input
@@ -70,21 +75,24 @@ const MessageForm = ({ updateMessages }) => {
           type="number"
           value={formData.age}
           onChange={handleChange}
+          placeholder="Your age"
           required
           min="0"
           max="120"
         />
       </p>
+
       <p>
         <label>State:</label>
         <input
           name="state"
           value={formData.state}
           onChange={handleChange}
+          placeholder="Your state (e.g. TX)"
           required
-          minLength={2}
         />
       </p>
+
       <p>
         <label>Review (0–5):</label>
         <input
@@ -93,16 +101,19 @@ const MessageForm = ({ updateMessages }) => {
           step="0.1"
           value={formData.review}
           onChange={handleChange}
+          placeholder="Your rating"
           required
           min="0"
           max="5"
         />
       </p>
+
       <p>
         <button type="submit">Submit</button>
       </p>
-      <p className="result">{result}</p>
-      <p className="error">{error}</p>
+
+      {result && <p className="result">{result}</p>}
+      {error && <p className="error">{error}</p>}
     </form>
   );
 };
