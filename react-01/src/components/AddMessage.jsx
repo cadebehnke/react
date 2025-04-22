@@ -11,7 +11,6 @@ const AddMessage = (props) => {
     const formData = new FormData(event.target);
     const newMessage = Object.fromEntries(formData.entries());
 
-    // Convert string values to numbers where needed
     newMessage.age = Number(newMessage.age);
     newMessage.review = Number(newMessage.review);
 

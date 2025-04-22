@@ -23,7 +23,6 @@ export default function MessageForm({ updateMessages }) {
     setError("");
     setResult("Sending...");
 
-    // Client‐side validation
     if (fd.name.trim().length < 2) {
       setError("Name must be at least 2 characters.");
       return;

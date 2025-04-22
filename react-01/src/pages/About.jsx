@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <main>
-        <div className="flex-container">
+        <div className="flex-container movetotop">
           <section className="col1of2">
             <h1 className="section-title">Meet The Owner</h1>
             <h2>Cade Behnke</h2>

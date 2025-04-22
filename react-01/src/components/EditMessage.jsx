@@ -11,7 +11,6 @@ const EditMessage = (props) => {
     const formData = new FormData(event.target);
     const updatedMessage = Object.fromEntries(formData.entries());
 
-    // Ensure number fields are treated as numbers (Joi expects this)
     updatedMessage.age = Number(updatedMessage.age);
     updatedMessage.review = Number(updatedMessage.review);
 
