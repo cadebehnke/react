@@ -9,30 +9,20 @@ const AddMessage = (props) => {
     setResult("Sending...");
 
     const formData = new FormData(event.target);
-    const newMessage = Object.fromEntries(formData.entries());
 
-    newMessage.age = Number(newMessage.age);
-    newMessage.review = Number(newMessage.review);
+    const response = await fetch("https://housing-backend-ujyb.onrender.com/api/messages", {
+      method: "POST",
+      body: formData,
+    });
 
-    try {
-      const response = await fetch("https://housing-backend-ujyb.onrender.com/api/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newMessage),
-      });
-
-      if (response.status === 200) {
-        const data = await response.json();
-        setResult("Message added successfully!");
-        event.target.reset();
-        props.closeAddDialog();
-        props.updateMessages(data);
-      } else {
-        const errorText = await response.text();
-        setResult(`Error: ${errorText}`);
-      }
-    } catch (err) {
-      setResult("Network error. Please try again.");
+    if (response.status === 200) {
+      const data = await response.json();
+      setResult("Message added successfully!");
+      event.target.reset();
+      props.closeAddDialog();
+      props.updateMessages(data);
+    } else {
+      setResult("Error adding message.");
     }
   };
 
@@ -47,45 +37,50 @@ const AddMessage = (props) => {
           >
             &times;
           </span>
+
           <form id="add-message-form" onSubmit={addToServer}>
             <h3>Leave a Message</h3>
 
+            {/* Name */}
             <p>
               <label htmlFor="name">Name:</label>
               <input type="text" id="name" name="name" required minLength="2" />
             </p>
 
+            {/* Age */}
             <p>
               <label htmlFor="age">Age:</label>
               <input type="number" id="age" name="age" required min="0" max="120" />
             </p>
 
+            {/* State */}
             <p>
               <label htmlFor="state">State:</label>
               <input type="text" id="state" name="state" required minLength="2" />
             </p>
 
+            {/* Review */}
             <p>
               <label htmlFor="review">Review (0–5):</label>
-              <input
-                type="number"
-                id="review"
-                name="review"
-                step="0.1"
-                min="0"
-                max="5"
-                required
-              />
+              <input type="number" id="review" name="review" required min="0" max="5" step="0.1" />
             </p>
 
+            {/* Message */}
             <p>
               <label htmlFor="message">Message:</label>
               <textarea id="message" name="message" required minLength="5" maxLength="500" />
             </p>
 
+            {/* Image Upload */}
+            <p>
+              <label htmlFor="img">Upload Image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </p>
+
             <p>
               <button type="submit">Submit</button>
             </p>
+
             <p>{result}</p>
           </form>
         </div>

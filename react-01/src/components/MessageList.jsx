@@ -2,12 +2,12 @@ import "./css/MessageList.css";
 import { useState } from "react";
 import EditMessage from "./EditMessage";
 import DeleteMessage from "./DeleteMessage";
+import MessageItem from "./MessageItem"; // <== make sure to import this
 
 const MessageList = (props) => {
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [showEditDialog, setShowEditDialog] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-  const [visibleMessages, setVisibleMessages] = useState(props.messages);
 
   const openEditDialog = (msg) => {
     setSelectedMessage(msg);
@@ -65,18 +65,15 @@ const MessageList = (props) => {
 
       <ul>
         {props.messages.map((msg) => (
-          <li key={msg._id} className="message-box">
-            <strong>{msg.name}</strong> ({msg.age}, {msg.state}) — ⭐ {msg.review}/5
-            <p>{msg.message}</p>
-            <div className="icon-buttons">
-              <button onClick={() => openEditDialog(msg)} title="Edit">
-                &#9998;
-              </button>
-              <button onClick={() => openDeleteDialog(msg)} title="Delete">
-                &#128465;
-              </button>
-            </div>
-          </li>
+          <MessageItem
+            key={msg._id}
+            name={msg.name}
+            age={msg.age}
+            state={msg.state}
+            review={msg.review}
+            message={msg.message}
+            img={msg.img} // <== pass the image field here
+          />
         ))}
       </ul>
     </section>

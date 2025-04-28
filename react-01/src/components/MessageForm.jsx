@@ -4,12 +4,12 @@ import "./css/MessageForm.css";
 
 export default function MessageForm({ updateMessages }) {
   const [fd, setFd] = useState({
-    name:    "",
-    age:     "",
-    state:   "",
-    review:  "",
+    name: "",
+    age: "",
+    state: "",
+    review: "",
     message: "",
-    img:     null,  
+    img: null,
   });
   const [error, setError] = useState("");
   const [result, setResult] = useState("");
@@ -28,6 +28,7 @@ export default function MessageForm({ updateMessages }) {
     setError("");
     setResult("Sending...");
 
+    // Validation
     if (fd.name.trim().length < 2) {
       setError("Name must be at least 2 characters.");
       return;
@@ -58,7 +59,7 @@ export default function MessageForm({ updateMessages }) {
       formData.append("state", fd.state.trim());
       formData.append("review", reviewNum);
       formData.append("message", fd.message.trim());
-      if (fd.img) formData.append("img", fd.img); 
+      if (fd.img) formData.append("img", fd.img);
 
       const res = await axios.post(
         "https://housing-backend-ujyb.onrender.com/api/messages",
@@ -77,95 +78,44 @@ export default function MessageForm({ updateMessages }) {
       <p>
         <label>
           Name:
-          <input
-            name="name"
-            type="text"
-            value={fd.name}
-            onChange={handleChange}
-            placeholder="Your name"
-            required
-            minLength={2}
-          />
+          <input name="name" type="text" value={fd.name} onChange={handleChange} placeholder="Your name" required minLength={2} />
         </label>
       </p>
       <p>
         <label>
           Age:
-          <input
-            name="age"
-            type="number"
-            value={fd.age}
-            onChange={handleChange}
-            placeholder="Your age"
-            required
-            min="0"
-            max="120"
-          />
+          <input name="age" type="number" value={fd.age} onChange={handleChange} placeholder="Your age" required min="0" max="120" />
         </label>
       </p>
       <p>
         <label>
           State:
-          <input
-            name="state"
-            type="text"
-            value={fd.state}
-            onChange={handleChange}
-            placeholder="Your state (e.g. TX)"
-            required
-            minLength={2}
-          />
+          <input name="state" type="text" value={fd.state} onChange={handleChange} placeholder="Your state (e.g. TX)" required minLength={2} />
         </label>
       </p>
       <p>
         <label>
           Review (0–5):
-          <input
-            name="review"
-            type="number"
-            step="0.1"
-            value={fd.review}
-            onChange={handleChange}
-            placeholder="Your rating"
-            required
-            min="0"
-            max="5"
-          />
+          <input name="review" type="number" step="0.1" value={fd.review} onChange={handleChange} placeholder="Your rating" required min="0" max="5" />
         </label>
       </p>
       <p>
         <label>
           Message:
-          <textarea
-            name="message"
-            value={fd.message}
-            onChange={handleChange}
-            placeholder="Your message"
-            required
-            minLength={5}
-            maxLength={500}
-          />
+          <textarea name="message" value={fd.message} onChange={handleChange} placeholder="Your message" required minLength={5} maxLength={500} />
         </label>
       </p>
-
-      {}
       <p>
         <label>
           Upload Image:
-          <input
-            type="file"
-            name="img"
-            accept="image/*"
-            onChange={handleChange}
-          />
+          <input type="file" name="img" accept="image/*" onChange={handleChange} />
         </label>
       </p>
-
       <p>
         <button type="submit">Submit</button>
       </p>
       {result && <p className="result">{result}</p>}
-      {error  && <p className="error">{error}</p>}
+      {error && <p className="error">{error}</p>}
     </form>
   );
 }
