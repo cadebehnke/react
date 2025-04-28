@@ -8,14 +8,19 @@ export default function MessageForm({ updateMessages }) {
     age:     "",
     state:   "",
     review:  "",
-    message: ""
+    message: "",
+    img:     null,  
   });
   const [error, setError] = useState("");
   const [result, setResult] = useState("");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFd((f) => ({ ...f, [name]: value }));
+    const { name, value, type, files } = e.target;
+    if (type === "file") {
+      setFd((f) => ({ ...f, img: files[0] }));
+    } else {
+      setFd((f) => ({ ...f, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -47,26 +52,28 @@ export default function MessageForm({ updateMessages }) {
     }
 
     try {
+      const formData = new FormData();
+      formData.append("name", fd.name.trim());
+      formData.append("age", ageNum);
+      formData.append("state", fd.state.trim());
+      formData.append("review", reviewNum);
+      formData.append("message", fd.message.trim());
+      if (fd.img) formData.append("img", fd.img); 
+
       const res = await axios.post(
         "https://housing-backend-ujyb.onrender.com/api/messages",
-        {
-          name:    fd.name.trim(),
-          age:     ageNum,
-          state:   fd.state.trim(),
-          review:  reviewNum,
-          message: fd.message.trim()
-        }
+        formData
       );
       updateMessages(res.data);
       setResult("Message added!");
-      setFd({ name: "", age: "", state: "", review: "", message: "" });
+      setFd({ name: "", age: "", state: "", review: "", message: "", img: null });
     } catch (err) {
       setError(err.response?.data || "Error adding message");
     }
   };
 
   return (
-    <form className="message-form" onSubmit={handleSubmit}>
+    <form className="message-form" onSubmit={handleSubmit} encType="multipart/form-data">
       <p>
         <label>
           Name:
@@ -140,6 +147,20 @@ export default function MessageForm({ updateMessages }) {
           />
         </label>
       </p>
+
+      {}
+      <p>
+        <label>
+          Upload Image:
+          <input
+            type="file"
+            name="img"
+            accept="image/*"
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+
       <p>
         <button type="submit">Submit</button>
       </p>
