@@ -2,7 +2,7 @@ import "./css/MessageList.css";
 import { useState } from "react";
 import EditMessage from "./EditMessage";
 import DeleteMessage from "./DeleteMessage";
-import MessageItem from "./MessageItem"; // <== make sure to import this
+import MessageItem from "./MessageItem";
 
 const MessageList = (props) => {
   const [selectedMessage, setSelectedMessage] = useState(null);
@@ -72,7 +72,7 @@ const MessageList = (props) => {
             state={msg.state}
             review={msg.review}
             message={msg.message}
-            img={msg.img} // <== pass the image field here
+            img={msg.img}
           />
         ))}
       </ul>
